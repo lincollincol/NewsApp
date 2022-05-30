@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.compose
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+
+    /* Android */
+    implementation lib.androidXCore
+    implementation lib.androidXAppCompat
+    implementation lib.androidXAppCompat
+    implementation lib.activityXActivityCompose
+
+    /* Compose UI */
+    implementation lib.composeUi
+    implementation lib.composeUiTooling
+    implementation lib.composeMaterial
+    implementation lib.composeRuntime
+    implementation lib.composeAnimation
+    implementation lib.composeCompiler
+    implementation lib.composeFoundation
+
+    /* Compose Debug */
+    debugImplementation lib.composeDebugUiTooling
+    debugImplementation lib.composeDebugTestManifest
+
+    /* Coroutines */
+    implementation lib.coroutinesCore
+    implementation lib.coroutinesAndroid
+
+    /* Lifecycle | ViewModel */
+    implementation lib.lifecycleViewModel
+    implementation lib.lifecycleRuntime
+    implementation lib.lifecycleCommon
+
+    /* DI */
+    implementation lib.hiltAndroid
+    kapt lib.hiltAnnotation
+
+    /* Image */
+    implementation lib.coil
+
+}

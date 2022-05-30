@@ -1,0 +1,61 @@
+ext.versions = [
+        coroutines        : "1.6.0",
+        androidXCore      : "1.7.0",
+        androidXAppCompat : "1.4.1",
+        androidxActivity  : "1.4.0",
+        lifecycle         : "2.4.1",
+        okHttp            : "4.9.1",
+        retrofit2         : "2.9.0",
+        room              : "2.4.2",
+        dataStore         : "1.0.0",
+        coil              : "2.1.0",
+        hilt              : "2.38.1",
+        compose           : "1.2.0-beta02",
+]
+ext.lib = [
+        /* Coroutines */
+        coroutinesCore           : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines",
+        coroutinesAndroid        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+
+        /* Android */
+        androidXCore             : "androidx.core:core:$versions.androidXCore",
+        androidXAppCompat        : "androidx.appcompat:appcompat:$versions.androidXAppCompat",
+        activityXActivityCompose : "androidx.activity:activity-compose:$versions.androidxActivity",
+
+        /* Compose UI */
+        composeUi                : "androidx.compose.ui:ui:$versions.compose",
+        composeUiTooling         : "androidx.compose.ui:ui-tooling-preview:$versions.compose",
+        composeMaterial          : "androidx.compose.material:material:$versions.compose",
+        composeRuntime           : "androidx.compose.runtime:runtime:$versions.compose",
+        composeAnimation         : "androidx.compose.animation:animation:$versions.compose",
+        composeCompiler          : "androidx.compose.compiler:compiler:$versions.compose",
+        composeFoundation        : "androidx.compose.foundation:foundation:$versions.compose",
+
+        /* Compose Debug */
+        composeDebugUiTooling    : "androidx.compose.ui:ui-tooling:$versions.compose",
+        composeDebugTestManifest : "androidx.compose.ui:ui-test-manifest:$versions.compose",
+
+        /* Lifecycle */
+        lifecycleViewModel       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+        lifecycleRuntime         : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
+        lifecycleCommon          : "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle",
+
+        /* Network */
+        okHttp3                  : "com.squareup.okhttp3:okhttp:$versions.okHttp",
+        okHttp3LoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
+        retrofit2                : "com.squareup.retrofit2:retrofit:$versions.retrofit2",
+        retrofit2Gson            : "com.squareup.retrofit2:converter-gson:$versions.retrofit2",
+
+        /* DI */
+        hiltAndroid              : "com.google.dagger:hilt-android:$versions.hilt",
+        hiltAnnotation           : "com.google.dagger:hilt-compiler:$versions.hilt",
+
+        /* Room */
+        roomCore                 : "androidx.room:room-runtime:$versions.room",
+        roomKtx                  : "androidx.room:room-ktx:$versions.room",
+        roomAnnotations          : "androidx.room:room-compiler:$versions.room",
+        dataStore                : "androidx.datastore:datastore:$versions.dataStore",
+
+        /* Image */
+        coil                     : "io.coil-kt:coil-compose:$versions.coil",
+]
